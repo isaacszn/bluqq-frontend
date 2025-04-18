@@ -1,10 +1,9 @@
 {
 	"folders": [
 		{
-			"path": "."
-		},
-		{
+			"name": "GitHub",
 			"path": "."
 		}
-	]
+	],
+	"settings": {}
 }
