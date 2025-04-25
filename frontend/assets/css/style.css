@@ -64,7 +64,6 @@ div {
 }
 
 div button:nth-child(1) {
-    color: black; 
     width: 150px;
     height: 50px;
     border: 0;
@@ -75,34 +74,20 @@ div button:nth-child(1) {
     cursor: pointer;
 }
 
-div button:nth-child(1):focus {
-    outline: none;    /* if you don’t want the default ring */
-    color: black;     /* or whatever your “neutral” focus style is */
-  }
-
-div button:nth-child(1):hover, div button:nth-child(1):active {
+div button:nth-child(1):hover, div button:nth-child(1):active, div button:nth-child(1):focus {
     color: blue;
 }
 
 div button:nth-child(2) {
-    color: white; 
     width: 150px;
     height: 50px;
     border: 0;
     font: inherit;
+    font-weight: bold;
     background-color: black;
     color: white;
     border-radius: 20px;
     cursor: pointer;
-}
-
-div button:nth-child(2):focus {
-    outline: none; 
-    color: rgb(255, 255, 255);   
-  }
-
-div button:nth-child(2):hover, div button:nth-child(2):active {
-    color: blue;
 }
 
 @media screen and (min-width: 481px) {
