@@ -28,8 +28,8 @@ form h1 {
 }
 
 figure img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin: 20px auto;
 }
 
@@ -40,7 +40,7 @@ input, select {
 input {
   width: 60%;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
 }
 
@@ -52,7 +52,7 @@ label {
 select {
   width: 100px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@ button {
   height: 40px;
   margin: 30px auto;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
   background-color: black;
   cursor: pointer;
