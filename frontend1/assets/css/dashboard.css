@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+    font-family: Lato;
+    src: url(/frontend/assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+body {
+    font: 1rem Lato, sans-serif;
+    background: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px;
+}
+
+.profile-btn {
+    background-color: white;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.user-name {
+  font: 1rem Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifications-btn {
+    background-color: white;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.balance-section {
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  width: 85%;
+  margin: 50px auto 0 auto;
+  padding: 25px;
+}
+
+.balance {
+  margin-top: 20px;
+  font: 2.5rem "Courier New", monospace;
+}
+
+.balance-section div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.eye-btn {
+  background-color: black;
+  border: 0;
+  cursor: pointer;
+}
+
+.quick-action {
+  margin: 70px;
+}
+
+.quick-action div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.quick-action button {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border: thin solid black;
+  border-radius: 50%;
+  font: inherit;
+  cursor: pointer;
+}
+
+.quick-action p {
+  margin-bottom: 30px;
+}
+
+.recent-transactions {
+  margin: 70px;
+}
+
+.recent-transactions p {
+  margin-bottom: 30px;
+}
+
+.recent-transactions .recent-transactions-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activities {
+  margin: 50px auto;
+}
+
+.activities article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 70%;
+  margin: auto;
+}
+
+.activities p {
+  margin: 25px 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 8%;
+  flex-direction: row;
+  width: 85%;
+  height: auto;
+  position: fixed;
+  bottom: 0px;
+  left: 7.5%;
+  background-color: white;
+}
+
+footer a {
+  text-decoration: none;
+}

@@ -16,7 +16,7 @@ body {
 }
 
 form {
-  margin: 20px auto;
+  margin: 7px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,13 +24,13 @@ form {
 }
 
 form h1 {
-  margin: 30px auto;
+  margin: 10px auto;
 }
 
 figure img {
-  width: 150px;
-  height: 150px;
-  margin: 20px auto;
+  width: 110px;
+  height: 110px;
+  margin: 5px auto;
 }
 
 input, select {
@@ -38,10 +38,10 @@ input, select {
 }
 
 input {
-  width: 60%;
-  height: 40px;
-  border-radius: 10px;
-  padding: 5px;
+  width: 65%;
+  height: 50px;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 label {
@@ -52,7 +52,7 @@ label {
 select {
   width: 100px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -60,11 +60,43 @@ button {
   font: inherit;
   font-weight: bold;
   width: 70%;
-  height: 40px;
+  height: 50px;
   margin: 30px auto;
   border: 0;
-  border-radius: 10px;
+  border-radius: 20px;
   color: white;
   background-color: black;
   cursor: pointer;
+}
+
+.first-view figure img {
+  display: none;
+}
+
+@media screen and (min-width: 926px) {
+  body {
+    display: flex;
+    height: 150vh;
+  }
+  
+  .first-view, form {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .first-view {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    width: 50vw;
+  }
+  
+  .first-view figure img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+  }
 }

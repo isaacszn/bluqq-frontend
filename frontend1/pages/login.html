@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block - Login</title>
+  <link rel="stylesheet" href="/frontend/assets/css/login.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/block-logo.png">
+</head>
+
+<body>
+  <form method="POST" action="/login">
+    <figure>
+      <img src="/frontend/assets/images/block-logo.png" alt="block-logo">
+    </figure>
+    <h1>Log in</h1>
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" placeholder="isaaczik9@gmail.com" required>
+    <label for="password">Your password</label>
+    <input type="password" name="password" id="password" placeholder="Password" required><br><br>
+    <a href="/frontend/pages/recover-password.html">Forgotten password?</a>
+    <button type="submit">Log in</button> 
+    
+    <p>Don't have an account? <a href="/frontend/pages/register.html">Create account</a></p>
+  </form>
+</body>
+
+</html>
