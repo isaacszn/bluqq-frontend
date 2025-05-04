@@ -1,0 +1,41 @@
+.verify-page {
+  margin-top: 100px;         
+}
+button {
+  font: inherit;
+  font-weight: bold;
+  width: 70%;
+  height: 50px;
+  margin: 30px auto;
+  border: 0;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.otp-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid #00aaff;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.otp-input:focus {
+  border-color: #000;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}

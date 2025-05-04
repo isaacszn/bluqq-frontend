@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/frontend/assets/css/style.css">
+  <link rel="stylesheet" href="/frontend/assets/css/verify.css">
+  <title>OTP Verification</title>
+</head>   
+  <body>
+    <main class="verify-page">
+      <h1><b></b>OTP Verification</h1>
+      <form id="otp-form" autocomplete="off">
+        <h3><label for="otp-digit">Enter the OTP code sent to your Email Address/Phone Number</label></h3>
+          <div class="otp-container">
+            <input type="text" id="otp-digit" inputmode="numeric" pattern="\d*" maxlength="1" class="otp-input"/>
+            <input type="text" id="otp-digit" inputmode="numeric" pattern="\d*" maxlength="1" class="otp-input"/>
+            <input type="text" id="otp-digit" inputmode="numeric" pattern="\d*" maxlength="1" class="otp-input"/>
+            <input type="text" id="otp-digit" inputmode="numeric" pattern="\d*" maxlength="1" class="otp-input"/>
+          </div>
+          <button type="submit" id="verify-btn">Verify</button>
+        </form>
+        <br><p>Didn't receive the code? <a href="/frontend/pages/resend-otp.html">Resend OTP</a></p>
+    </main>  
+  </body>
+</html>
