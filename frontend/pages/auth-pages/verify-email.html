@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block - Verify email</title>
+  <link rel="stylesheet" href="/frontend/assets/css/verify-email.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/block-logo.png">
+</head>
+
+<body>
+  <section class="first-view">
+    <figure>
+      <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
+    </figure>
+  </section>
+
+  <form method="POST" action="/verify-email">
+    <figure>
+      <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
+    </figure>
+    <h1>Email Verification</h1>
+    <p>Enter the OTP code sent to your email address.</p>
+    <!-- pin box -->
+    <button type="submit">Verify</button>
+    <p>Didn't receive code? <a href="/frontend/pages/auth-pages/verify-email.html">resend code</a></p>
+  </form>
+</body>
+
+</html>
