@@ -16,7 +16,7 @@ body {
 }
 
 form {
-  margin: 20px auto;
+  margin: 3px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +24,12 @@ form {
 }
 
 form h1 {
-  margin: 10px auto;
+  margin: 3px auto;
 }
 
 figure img {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   margin: 5px auto;
 }
 
@@ -86,18 +86,23 @@ button {
 @media screen and (min-width: 926px) {
   body {
     display: flex;
-    height: 295vh;
+    height: 100vh;
+    overflow: hidden;
   }
   
-  .first-view, form {
+  form {
     flex: 1;
-    padding: 2rem;
+    overflow-y: auto;
+    padding: 60px;
+    height: 100vh;
   }
   
   .first-view {
+    flex: 1;
     background-color: whitesmoke;
-    min-height: 100vh;
-    width: 50vw;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
   
   .first-view figure img {
