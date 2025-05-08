@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Block - Setup pin for your Block account</title>
-  <link rel="stylesheet" href="/frontend/assets/css/setup-pin.css">
-  <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/images/block-logo.png">
+  <title>Block - Input pin to confirm login</title>
+  <link rel="stylesheet" href="/frontend/assets/css/confirm-login.css">
 </head>
 
 <body>
@@ -16,19 +15,20 @@
     </figure>
   </section>
 
-  <form method="POST" action="/setup-pin">
+  <form method="POST" action="/confirm-login">
     <figure>
       <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
     </figure>
-    <h1>Setup Pin</h1>
-    <p>Input in a 4 digits pin for your Block day to day transactions. You can make transactions with this pin</p>
+    <h1>Confirm Login</h1>
+    <p>Input 4 digits code to login.</p>
+    <label for="pin">Pin</label>
     <div class="pin-boxes">
       <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
       <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
       <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
       <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
     </div>
-    <button type="submit">Done —> </button>
+    <button type="submit">Log into account</button>
   </form>
 </body>
 

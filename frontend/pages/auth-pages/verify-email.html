@@ -22,9 +22,14 @@
     </figure>
     <h1>Email Verification</h1>
     <p>Enter the OTP code sent to your email address.</p>
-    <!-- pin box -->
+    <div class="pin-boxes">
+      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+    </div>
     <button type="submit">Verify</button>
-    <p>Didn't receive code? <a href="/frontend/pages/auth-pages/verify-email.html">resend code</a></p>
+    <p>Didn't receive code? <a href="/frontend/pages/auth-pages/verify-email.html">Resend code</a></p>
   </form>
 </body>
 

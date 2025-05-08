@@ -20,32 +20,48 @@
       <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
     </figure>
     <h1>Register</h1>
-    <label for="country" class="large">What country do you live in?</label>
-    <select name="country" id="country" class="country-field" required>
+    <section class="first-phase d-f">
+      <label for="country" class="large">What country do you live in?</label>
+      <select name="country" id="country" class="country-field" required>
         <option value="nigeria">Nigeria 🇳🇬</option>
         <option value="ghana">Ghana 🇬🇭</option>
-    </select>
-    <label for="firstname">What's your firstname?</label>
-    <input type="text" name="firstname" id="firstname" placeholder="Isaac" autocomplete="" required>
-    <label for="lastname">What's your lastname?</label>
-    <input type="text" name="lastname" id="lastname" placeholder="Ugochukwu" autocomplete="" required>
-    <label for="email">Enter your valid address</label>
-    <input type="email" name="email" id="email" placeholder="example@block.com" autocomplete="" required>
-    <label for="firstname">Enter phone digits</label>
-    <input type="tel" name="tel" id="tel" placeholder="+2349166608124" autocomplete="" required>
-    <label for="gender">Gender?</label>
-    <select name="gender" id="gender" required>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-    </select>
-    <label for="password">Create password</label>
-    <input type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
-    <label for="confirm-password">Confirm password</label>
-    <input type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
-    <button type="submit">Register</button>
-    
-    <p>Already have an account? <a href="/frontend/pages/auth-pages/login.html">Log into account</a></p>
+      </select>
+      <br><br>
+        <button type="button" id="next-1">Next -></button>
+    </section>
+    <section class="second-phase d-n">
+      <label for="firstname">What's your firstname?</label>
+      <input type="text" name="firstname" id="firstname" placeholder="Isaac" autocomplete="" required>
+      <label for="lastname">What's your lastname?</label>
+      <input type="text" name="lastname" id="lastname" placeholder="Ugochukwu" autocomplete="" required>
+      <br><br>
+      <button type="button" id="next-2">Next -></button>
+    </section>
+    <section class="third-phase d-n">
+      <label for="email">Enter your valid address</label>
+      <input type="email" name="email" id="email" placeholder="example@block.com" autocomplete="" required>
+      <label for="firstname">Enter phone digits</label>
+      <input type="tel" name="tel" id="tel" placeholder="+2349166608124" autocomplete="" required>
+      <label for="gender">Gender?</label>
+      <select name="gender" id="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <br><br>
+      <button type="button" id="next-3">Next -></button>
+    </section>
+    <section class="last-phase d-n">
+      <label for="password">Create password</label>
+      <input type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
+      <label for="confirm-password">Confirm password</label>
+      <input type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
+      <button type="submit">Register</button>
+    </section>
+    <br><br><br>
+    <p class="link">Already have an account? <a href="/frontend/pages/auth-pages/login.html">Log into account</a></p>
   </form>
+  
+  <script src="/frontend/assets/scripts/index.js"></script>
 </body>
 
 </html>
