@@ -40,6 +40,7 @@ input, select {
 input {
   width: 250px;
   height: 50px;
+  border: thin solid black;
   border-radius: 20px;
   padding: 10px;
 }
@@ -66,7 +67,7 @@ select {
   margin: 20px;
 }
 
-button[type="button"] {
+.next {
   font: inherit;
   width: 130px;
   height: 30px;
@@ -94,7 +95,6 @@ button[type="submit"] {
   display: none;
 }
 
-
 /*.second-phase, .third-phase, .last-phase {
   display: none;
 }*/
@@ -109,6 +109,39 @@ button[type="submit"] {
   align-items: center;
   flex-direction: column;
   margin: 10px;
+}
+
+.note {
+  font-family: Courier;
+  font-weight: bolder;
+  margin: 20px;
+  background-color: deepskyblue;
+  color: black;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.note h2 {
+  margin: 15px;
+}
+
+.next-back-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;  
+}
+
+.prev-1, .prev-2, .prev-3 {
+  font: inherit;
+  border: 0;
+  background-color: white;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 926px) {
