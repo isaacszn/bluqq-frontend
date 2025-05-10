@@ -26,8 +26,14 @@
         <option value="nigeria">Nigeria 🇳🇬</option>
         <option value="ghana">Ghana 🇬🇭</option>
       </select>
+      <div class="note">
+        <h2>⚠️ Please Note!</h2>
+        <p>Document you can use for verification depends only on your selected country.<br>Please cross check your choice</p>
+      </div>
       <br><br>
-        <button type="button" id="next-1">Next -></button>
+      <div class="next-back-btns">
+        <button type="button" class="next" id="next-1">Next -></button>
+      </div>
     </section>
     <section class="second-phase d-n">
       <label for="firstname">What's your firstname?</label>
@@ -35,7 +41,10 @@
       <label for="lastname">What's your lastname?</label>
       <input type="text" name="lastname" id="lastname" placeholder="Ugochukwu" autocomplete="" required>
       <br><br>
-      <button type="button" id="next-2">Next -></button>
+      <div class="next-back-btns">
+        <button type="button" class="prev-1">Previous</button>
+        <button type="button" class="next" id="next-2">Next -></button>
+      </div>
     </section>
     <section class="third-phase d-n">
       <label for="email">Enter your valid address</label>
@@ -48,19 +57,24 @@
         <option value="female">Female</option>
       </select>
       <br><br>
-      <button type="button" id="next-3">Next -></button>
+      <div class="next-back-btns">
+        <button type="button" class="prev-2">Previous</button>
+        <button type="button" class="next" id="next-3">Next -></button>
+      </div>
     </section>
     <section class="last-phase d-n">
       <label for="password">Create password</label>
       <input type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
       <label for="confirm-password">Confirm password</label>
       <input type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
+      <br><br>
+      <button type="button" class="prev-3">Previous</button>
       <button type="submit">Register</button>
     </section>
     <br><br><br>
     <p class="link">Already have an account? <a href="/frontend/pages/auth-pages/login.html">Log into account</a></p>
   </form>
-  
+
   <script src="/frontend/assets/scripts/index.js"></script>
 </body>
 
