@@ -15,7 +15,8 @@
       <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
     </figure>
   </section>
-  <form method="POST" action="/register">
+  <form>
+    <div class="message-box d-n"></div>
     <figure>
       <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
     </figure>
@@ -23,6 +24,7 @@
     <section class="first-phase d-f">
       <label for="country" class="large">What country do you live in?</label>
       <select name="country" id="country" class="country-field" required>
+        <option value="null">--Country--</option>
         <option value="nigeria">Nigeria 🇳🇬</option>
         <option value="ghana">Ghana 🇬🇭</option>
       </select>
@@ -53,6 +55,7 @@
       <input type="tel" name="tel" id="tel" placeholder="+2349166608124" autocomplete="" required>
       <label for="gender">Gender?</label>
       <select name="gender" id="gender" required>
+        <option value="null">--Choose gender--</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
@@ -75,6 +78,8 @@
     <p class="link">Already have an account? <a href="/frontend/pages/auth-pages/login.html">Log into account</a></p>
   </form>
 
+  <!-- Scripts -->
+  <script src="/frontend/assets/scripts/register.js"></script>
   <script src="/frontend/assets/scripts/index.js"></script>
 </body>
 
