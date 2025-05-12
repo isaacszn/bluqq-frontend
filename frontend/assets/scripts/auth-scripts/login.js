@@ -26,7 +26,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
       setTimeout(() => {
         document.querySelector('.message-box').classList.remove('show')
         document.querySelector('.message-box').classList.add('d-n')
-      }, 3.5 * 1000)
+      }, 6 * 1000)
     } else {
       document.querySelector('.message-box').classList.remove('d-n')
       document.querySelector('.message-box').classList.add('show')
@@ -34,7 +34,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
       setTimeout(() => {
         document.querySelector('.message-box').classList.remove('show')
         document.querySelector('.message-box').classList.add('d-n')
-      }, 3.5 * 1000)
+      }, 6 * 1000)
     }
   }
   catch (err) {
