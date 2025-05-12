@@ -17,7 +17,7 @@ body {
 }
 
 form {
-  margin: 25px 15px 15px auto;
+  margin: 25px auto 15px auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
