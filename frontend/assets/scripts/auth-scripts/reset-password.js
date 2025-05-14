@@ -3,17 +3,17 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   // Prevent form refresh
   e.preventDefault();
   const formData = new FormData(e.target);
-  const newPassword = formData.get('newPassword');
-  const confirmPassword = formData.get('confirmPassword');
+  const new-password = formData.get('new-password');
+  const confirm-password = formData.get('confirm-password');
   // Log the entered passwords
-  console.log(`New Password: ${newPassword}, Confirm: ${confirmPassword}`);
+  console.log(`New Password: ${new-password}, Confirm: ${confirm-password}`);
 
   try {
     // Simulated API call (always fails without backend)
     const res = await fetch('/backend/api/reset-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ newPassword, confirmPassword })
+      body: JSON.stringify({ new-password, confirm-password })
     });
 
     // Simulated response - always show error
