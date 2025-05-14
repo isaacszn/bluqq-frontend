@@ -20,7 +20,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
       document.querySelector('.message-box').classList.add('show');
       document.querySelector('.message-box').innerHTML = 'PIN set successfully! 🔐';
       // redirect to verification page
-      window.location.href = '/frontend/pages/verify.html';
+      window.location.href = '/frontend/pages/verify-email.html';
       setTimeout(() => {
         document.querySelector('.message-box').classList.remove('show');
         document.querySelector('.message-box').classList.add('d-n');
