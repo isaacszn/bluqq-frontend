@@ -2,14 +2,14 @@
 document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const verificationCode = formData.get('verificationCode');
-  console.log(`Verification Code: ${verificationCode}`);
+  const submit = formData.get('submit');
+  console.log(`Submit: ${submit}`);
 
   try {
     const res = await fetch('/backend/api/verify-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code: verificationCode })
+      body: JSON.stringify({ code: submit })
     });
 
     // EXACT login script conditional structure
@@ -45,7 +45,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 });
 
 // Resend Code Button Handler
-document.getElementById('resendBtn').addEventListener('click', async (e) => {
+document.getElementById('resend-code').addEventListener('click', async (e) => {
   e.preventDefault();
   console.log('Resend code requested');
 
