@@ -5,15 +5,15 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target)
   const email = formData.get('email')
-  const button = formData.get('button')
+  const submit = formData.get('submit')
   // Logs the collected user data on console
-  console.log(`${email} ${button}`)
+  console.log(`${email} ${submit}`)
 
   try {
-    const res = await fetch('/backend/api/login', {
+    const res = await fetch('/backend/api/forgetpassword', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, button })
+      body: JSON.stringify({ email, submit })
     })
     //const data = await res.json()
     if (res.ok) {
