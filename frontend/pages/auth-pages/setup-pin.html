@@ -16,20 +16,23 @@
     </figure>
   </section>
 
-  <form method="POST" action="/setup-pin">
+  <form>
+    <div class="message-box d-n"></div>
     <figure>
       <img src="/frontend/assets/images/block-logo.png" alt="block-logo" width="720" height="717">
     </figure>
     <h1>Setup Pin</h1>
     <p>Input in a 4 digits pin for your Block day to day transactions. You can make transactions with this pin</p>
     <div class="pin-boxes">
-      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
-      <input type="password" name="pin" id="pin" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-1" id="pin-1" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-2" id="pin-2" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-3" id="pin-3" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-4" id="pin-4" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
     </div>
     <button type="submit">Done —> </button>
   </form>
+  <!-- Scripts -->
+  <script src="/frontend/assets/scripts/auth-scripts/setup-pin.js"></script>
 </body>
 
 </html>
