@@ -87,7 +87,7 @@ button {
   font: 1.2rem Courier;
   font-weight: bolder;
   width: 100%;
-  height: auto;
+  height: 35px;
   padding: 10px;
   background-color: deepskyblue;
   color: black;
