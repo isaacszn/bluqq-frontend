@@ -87,6 +87,38 @@ p {
   gap: 10px;
 }
 
+.show {
+  display: block;
+}
+
+.d-n {
+  display: none;
+}
+
+.message-box {
+  font: 1.2rem Courier;
+  font-weight: bolder;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: deepskyblue;
+  color: black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: 1s ease-out pop;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  } 
+  100% {
+    transform: scale(110%);
+  }
+}
+
 @media screen and (min-width: 926px) {
   body {
     display: flex;
