@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   const email = formData.get('email')
   const password = formData.get('password')
   // Logs the collected user data on console
-  console.log(`${email} ${password}`)
+  console.log(`Email: ${email}, Password: ${password}`)
 
   try {
     const res = await fetch('/backend/api/login', {

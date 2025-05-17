@@ -2,14 +2,20 @@
 document.querySelector('form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const submit = formData.get('submit');
-  console.log(`Submit: ${submit}`);
+  const pin1 = formData.get('pin-1');
+  const pin2 = formData.get('pin-2');
+  const pin3 = formData.get('pin-3');
+  const pin4 = formData.get('pin-4');
+  // Main pin
+  const pin = pin1 + pin2 + pin3 + pin4;
+  // Log the entered PIN
+  console.log(`PIN Attempt: ${pin}`);
 
   try {
     const res = await fetch('/backend/api/verify-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code: submit })
+      body: JSON.stringify({ pin })
     });
 
     // EXACT login script conditional structure
@@ -44,7 +50,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   }
 });
 
-// Resend Code Button Handler
+/*// Resend Code Button Handler
 document.getElementById('resend-code').addEventListener('click', async (e) => {
   e.preventDefault();
   console.log('Resend code requested');
@@ -84,4 +90,4 @@ document.getElementById('resend-code').addEventListener('click', async (e) => {
       document.querySelector('.message-box').classList.add('d-n');
     }, 6 * 1000);
   }
-});
+});*/

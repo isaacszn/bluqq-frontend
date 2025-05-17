@@ -3,9 +3,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   // Prevent form refresh
   e.preventDefault();
   const formData = new FormData(e.target);
-  const pin = formData.get('pin');
+  const pin1 = formData.get('pin-1');
+  const pin2 = formData.get('pin-2');
+  const pin3 = formData.get('pin-3');
+  const pin4 = formData.get('pin-4');
+  // Main pin
+  const pin = pin1 + pin2 + pin3 + pin4;
   // Log the entered PIN
-  console.log(`Entered PIN: ${pin}`);
+  console.log(`PIN Attempt: ${pin}`);
 
   try {
     // Simulated API call (replace with real endpoint later)

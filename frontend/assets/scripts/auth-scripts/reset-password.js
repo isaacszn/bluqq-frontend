@@ -6,14 +6,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   const newPassword = formData.get('new-password');
   const confirmPassword = formData.get('confirm-password');
   // Log the entered passwords
-  console.log(`New Password: ${new-password}, Confirm: ${confirm-password}`);
+  console.log(`New Password: ${newPassword}, Confirm: ${confirmPassword}`);
 
   try {
     // Simulated API call (replace with real endpoint later)
     const res = await fetch('/backend/api/reset-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ new-password, confirm-password })
+      body: JSON.stringify({ newPassword, confirmPassword })
     });
 
     //const data = await res.json()
