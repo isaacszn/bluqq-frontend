@@ -173,6 +173,20 @@ button[type="submit"] {
   }
 }
 
+.error-message {
+  font: 15px monospace;
+  color: red;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.error-message-2 {
+  font: 15px monospace;
+  color: red;
+  margin-top: 20px;
+  width: 80%;
+}
+
 @media screen and (min-width: 926px) {
   body {
     display: flex;
