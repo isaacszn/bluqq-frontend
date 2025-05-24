@@ -87,13 +87,18 @@ nav {
 }
 
 .quick-action button {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
   background-color: gray;
   border: thin solid black;
   border-radius: 50%;
   font: inherit;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .quick-action p {
@@ -137,14 +142,20 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin: 20px auto;
   gap: 8%;
   flex-direction: row;
-  width: 85%;
+  width: 90%;
   height: auto;
   position: fixed;
   bottom: 0px;
-  left: 7.5%;
-  background-color: white;
+  left: 4.5%;
+  background-color: whitesmoke;
+  border: thin solid black;
+  padding: 20px;
+  border-radius: 40px;
 }
 
 footer a {
