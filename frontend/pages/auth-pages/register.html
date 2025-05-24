@@ -67,9 +67,11 @@
     </section>
     <section class="last-phase d-n">
       <label for="password">Create password</label>
-      <input type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
+      <input oninput="checkPassword()" type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
+      <p class="error-message d-n">Password not strong. Make it at least 6 characters long with mix of symbols and numerals</p>
       <label for="confirm-password">Confirm password</label>
-      <input type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
+      <input oninput="checkConfirmPassword()" type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
+      <p class="error-message-2 d-n">Passwords do not match</p>
       <br><br>
       <button type="button" class="prev-3">Previous</button>
       <button type="submit">Register</button>
