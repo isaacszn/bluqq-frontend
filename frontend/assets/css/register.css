@@ -187,6 +187,13 @@ button[type="submit"] {
   width: 80%;
 }
 
+.error-message-3 {
+  font: 15px monospace;
+  color: red;
+  margin-top: 20px;
+  width: 80%;
+}
+
 @media screen and (min-width: 926px) {
   body {
     display: flex;
