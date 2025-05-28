@@ -48,7 +48,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 });
 
 const checkPassword = () => {
-  if (document.querySelector('#new-password').value.length < 6) {
+  if (!RegexJS.validatePassword(document.querySelector('#new-password').value)) {
     document.querySelector('.error-message').classList.remove('d-n')
     document.querySelector('.error-message').classList.add('show')
     return false

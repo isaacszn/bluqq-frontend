@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   const formData = new FormData(e.target)
   const email = formData.get('email')
   // Logs the collected user data on console
-  console.log(`Email${email}`)
+  console.log(`Email ${email}`)
 
   try {
     const res = await fetch('/backend/api/forget-password', {
