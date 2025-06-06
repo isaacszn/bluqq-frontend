@@ -19,7 +19,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     console.log(`User country: ${country}, First name: ${firstName}, Last name: ${lastName}, Phone number: ${phoneNumber}, User email: ${email}, Password: ${password}, Gender: ${gender}`)
 
     try {
-      fetch('https://new-backend-production-0da2.up.railway.app/register', {
+      fetch(https://new-backend-production-0da2.up.railway.app/register, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
