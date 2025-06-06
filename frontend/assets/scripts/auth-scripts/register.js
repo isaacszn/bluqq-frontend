@@ -1,6 +1,6 @@
 // Add event listener to the form to collect data when it submits 
 // I used an asynchronous function
-document.querySelector('form').addEventListener('submit', async (e) => {
+document.querySelector('form').addEventListener('submit', (e) => {
   // This prevents the form from refreshing everytime the submit button is clicked
   e.preventDefault();
 
@@ -19,12 +19,17 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     console.log(`User country: ${country}, First name: ${firstName}, Last name: ${lastName}, Phone number: ${phoneNumber}, User email: ${email}, Password: ${password}, Gender: ${gender}`)
 
     try {
-      const res = await fetch('backend/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ country, firstName, lastName, email, phoneNumber, password, gender })
-      })
-      //const data = await res.json()
+      fetch('https://new-backend-production-0da2.up.railway.app/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ country, firstName, lastName, phoneNumber, email, password, gender })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+
       if (res.ok) {
         document.querySelector('.message-box').classList.remove('d-n')
         document.querySelector('.message-box').classList.add('show')
