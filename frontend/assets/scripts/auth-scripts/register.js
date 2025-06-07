@@ -31,6 +31,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify({ country, firstName, lastName, phoneNumber, email, password, gender })
     });
