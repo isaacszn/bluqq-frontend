@@ -132,6 +132,19 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     }, 6000);
   }
 });
+// Ensure RegexJS is defined (add this if not already in your code)
+const RegexJS = RegexJS || {
+  validatePassword: (password) => {
+    // At least 8 chars, 1 uppercase, 1 number, 1 special char
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return regex.test(password);
+  },
+  validatePhoneNumber: (phone) => {
+    // Basic phone validation
+    const regex = /^(\+\d{1,3})?[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/;
+    return regex.test(phone);
+  }
+};
 
 // Validation functions
 const checkPassword = () => {
@@ -177,19 +190,5 @@ const checkPhoneNumber = () => {
     errorElement.classList.remove('show');
     errorElement.classList.add('d-n');
     return true;
-  }
-};
-
-// Ensure RegexJS is defined (add this if not already in your code)
-const RegexJS = RegexJS || {
-  validatePassword: (password) => {
-    // At least 8 chars, 1 uppercase, 1 number, 1 special char
-    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return regex.test(password);
-  },
-  validatePhoneNumber: (phone) => {
-    // Basic phone validation
-    const regex = /^(\+\d{1,3})?[\s-]?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/;
-    return regex.test(phone);
   }
 };
