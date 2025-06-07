@@ -26,7 +26,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     // Replace with your actual login endpoint
     const response = await fetch('https://new-backend-production-0da2.up.railway.app/api/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' 'Accept': 'application/json'},
       body: JSON.stringify({ email, password })
     });
 
