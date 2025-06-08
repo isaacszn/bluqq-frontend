@@ -10,12 +10,13 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   console.log(`Email: ${email}, Password: ${password}`)
 
   try {
-    const res = await fetch('/backend/api/login', {
+    const response = await fetch('https://new-backend-production-0da2.up.railway.app/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
     })
-    //const data = await res.json()
+    const data = await response.json()
+    console.log(data)
     if (res.ok) {
       document.querySelector('.message-box').classList.remove('d-n')
       document.querySelector('.message-box').classList.add('show')
