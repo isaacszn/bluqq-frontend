@@ -1,6 +1,6 @@
-/ Add event listener to the form to collect data when it submits 
+// Add event listener to the form to collect data when it submits 
 // I used an asynchronous function
-document.querySelector('form').addEventListener('submit', (e) => {
+document.querySelector('form').addEventListener('submit', async (e) => {
   // This prevents the form from refreshing everytime the submit button is clicked
   e.preventDefault();
 
@@ -19,17 +19,15 @@ document.querySelector('form').addEventListener('submit', (e) => {
     console.log(`User country: ${country}, First name: ${firstName}, Last name: ${lastName}, Phone number: ${phoneNumber}, User email: ${email}, Password: ${password}, Gender: ${gender}`)
 
     try {
-      fetch('https://new-backend-production-0da2.up.railway.app/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ country, firstName, lastName, phoneNumber, email, password, gender })
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.error(err));
-
+      const response = await fetch('https://new-backend-production-0da2.up.railway.app/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ country, firstName, lastName, phoneNumber, email, password, gender })
+      })
+      const data = await response.json()
+      console.log(data)
       if (res.ok) {
         document.querySelector('.message-box').classList.remove('d-n')
         document.querySelector('.message-box').classList.add('show')
@@ -86,7 +84,8 @@ const checkPhoneNumber = () => {
     document.querySelector('.error-message').classList.add('show')
     return false
   } else {
-    document.querySelector('.error-message').classList.remove('show')More actions
+    document.querySelector('.error-message').classList.remove('show')
     document.querySelector('.error-message').classList.add('d-n')
     return true
   }
+}
