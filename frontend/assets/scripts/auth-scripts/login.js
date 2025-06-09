@@ -12,8 +12,14 @@ document.querySelector('form').addEventListener('submit', async (e) => {
   try {
     const response = await fetch('https://new-backend-production-0da2.up.railway.app/api/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ 
+        "email": email, 
+        "password": password 
+      })
     })
     const data = await response.json()
     console.log(data)

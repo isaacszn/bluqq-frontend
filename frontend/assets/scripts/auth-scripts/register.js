@@ -18,7 +18,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 
   if (checkPassword() && checkConfirmPassword() && checkPhoneNumber()) {
     // Logs the collected user data on console
-    console.log(`User country: ${country}, Address: ${address}, First name: ${firstName}, Last name: ${lastName}, Phone number: ${phoneNumber}, User email: ${email}, Password: ${password}, Confirm password ${passwordConfirmation}, Gender: ${gender}`)
+    console.log(`User country: ${country}, Address: ${address}, First name: ${firstName}, Last name: ${lastName}, Phone number: ${phoneNumber}, User email: ${email}, Password: ${password}, Confirm password: ${passwordConfirmation}, Gender: ${gender}`)
 
     try {
       const response = await fetch('https://new-backend-production-0da2.up.railway.app/api/register', {
