@@ -15,6 +15,7 @@
       <img src="/frontend/assets/images/bluqq-logo.jpg" alt="bluqq-logo" width="720" height="717">
     </figure>
   </section>
+
   <form>
     <div class="message-box d-n"></div>
     <figure>
@@ -32,9 +33,8 @@
         <h2>⚠️ Please Note!</h2>
         <p>Document you can use for verification depends only on your selected country.<br>Please cross check your choice</p>
       </div>
-      <br><br>
       <div class="next-back-btns">
-        <button type="button" class="next" id="next-1">Next -></button>
+        <button type="button" class="next" id="next-1">&rarr;</button>
       </div>
     </section>
     <section class="second-phase d-n">
@@ -44,16 +44,15 @@
       <input type="text" name="lastname" id="lastname" placeholder="Ugochukwu" autocomplete="" required>
       <label for="address">Your current address?</label>
       <input type="text" name="address" id="address" placeholder="Street, City, State" autocomplete="" required>
-      <br><br>
       <div class="next-back-btns">
         <button type="button" class="prev-1">Previous</button>
-        <button type="button" class="next" id="next-2">Next -></button>
+        <button type="button" class="next" id="next-2">&rarr;</button>
       </div>
     </section>
     <section class="third-phase d-n">
-      <label for="email">Enter your valid email address</label>
+      <label for="email">Enter your valid email address:</label>
       <input type="email" name="email" id="email" placeholder="example@block.com" autocomplete="" required>
-      <label for="firstname">Enter phone digits</label>
+      <label for="firstname">Enter phone digits:</label>
       <input oninput="checkPhoneNumber()" type="tel" name="tel" id="tel" placeholder="+2349166608124" autocomplete="" required>
       <p class="error-message d-n">Invalid phone number!</p>
       <label for="gender">Gender?</label>
@@ -62,24 +61,22 @@
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
-      <br><br>
       <div class="next-back-btns">
         <button type="button" class="prev-2">Previous</button>
-        <button type="button" class="next" id="next-3">Next -></button>
+        <button type="button" class="next" id="next-3">&rarr;</button>
       </div>
     </section>
     <section class="last-phase d-n">
-      <label for="password">Create password</label>
+      <label for="password">Create password:</label>
       <input oninput="checkPassword()" type="password" name="password" id="password" placeholder="Use a very strong password 6-8 characters long" required>
       <p class="error-message-2 d-n">Password not strong. Make it at least 6 characters long with mix of symbols and numerals</p>
-      <label for="confirm-password">Confirm password</label>
+      <label for="confirm-password">Confirm password:</label>
       <input oninput="checkConfirmPassword()" type="password" name="confirm-password" id="confirm-password" placeholder="Use same password" required>
       <p class="error-message-3 d-n">Passwords do not match</p>
-      <br><br>
+      <br>
       <button type="button" class="prev-3">Previous</button>
       <button type="submit">Register</button>
     </section>
-    <br><br><br>
     <p class="link">Already have an account? <a href="/frontend/pages/auth-pages/login.html">Log into account</a></p>
   </form>
 
