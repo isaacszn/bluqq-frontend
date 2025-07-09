@@ -1,163 +1,369 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Fonts */
-@font-face {
-    font-family: Lato;
-    src: url(/frontend/assets/fonts/Lato/Lato-Regular.ttf);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font: 1rem Lato, sans-serif;
-    background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #000000;
+  padding-bottom: 100px;
 }
 
+/* Navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: #000000;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
 }
 
 .profile-btn {
-    background-color: white;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.user-name {
-  font: 1rem Lato, sans-serif;
+.profile-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .notifications-btn {
-    background-color: white;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    font: inherit;
-}
-
-.balance-section {
-  background-color: black;
-  color: white;
-  border: 0;
-  border-radius: 20px;
-  width: 85%;
-  margin: 50px auto 0 auto;
-  padding: 25px;
-}
-
-.balance {
-  margin-top: 20px;
-  font: 2.5rem "Courier New", monospace;
-}
-
-.balance-section div {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-direction: row;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.notifications-btn:hover {
+  background: #f5f5f5;
+  transform: scale(1.1);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  background: #000000;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Balance Section */
+.balance-section {
+  background: #000000;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.balance-header span {
+  font-size: 16px;
+  color: #cccccc;
+  font-weight: 500;
 }
 
 .eye-btn {
-  background-color: black;
-  border: 0;
-  cursor: pointer;
-}
-
-.quick-action {
-  margin: 70px;
-}
-
-.quick-action div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.quick-action button {
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  background-color: gray;
-  border: thin solid black;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 50%;
-  font: inherit;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.quick-action p {
-  margin-bottom: 30px;
+.eye-btn:hover {
+  background: #f5f5f5;
 }
 
-.recent-transactions {
-  margin: 70px;
+.balance {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Courier New', monospace;
 }
 
-.recent-transactions p {
-  margin-bottom: 30px;
+.currency {
+  color: #ffffff;
 }
 
-.recent-transactions .recent-transactions-section {
+/* Quick Actions */
+.quick-action {
+  margin: 40px 30px;
+}
+
+.quick-action h3 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.action-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.activities {
-  margin: 50px auto;
-}
-
-.activities article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 2rem;
-  width: 70%;
-  margin: auto;
 }
 
-.activities p {
-  margin: 25px 50px;
+.action-btn {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.action-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 5px;
+  background: #000000;
+  color: #ffffff;
+}
+
+.action-btn:hover .action-icon {
+  background: #ffffff;
+  color: #000000;
+}
+
+.action-label {
+  font-size: 10px;
+  color: #000000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.action-btn:hover .action-label {
+  color: #ffffff;
+}
+
+/* Recent Transactions */
+.recent-transactions {
+  margin: 40px 30px;
+}
+
+.recent-transactions h3 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.transactions-container {
+  background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-transactions {
+  color: #666666;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.no-transactions-icon {
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Footer Navigation */
 footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: #000000;
+  border-radius: 30px;
+  padding: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /*margin-left: auto;
-  margin-right: auto;*/
-  margin: 20px auto;
-  gap: 8%;
-  flex-direction: row;
-  width: 90%;
-  height: auto;
-  position: fixed;
-  bottom: 0px;
-  left: 4.5%;
-  background-color: whitesmoke;
-  border: thin solid black;
-  padding: 20px;
-  border-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #000000;
 }
 
 footer a {
-  text-decoration: none;
+  padding: 12px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+footer a.active {
+  background: #ffffff;
+}
+
+footer a.active .nav-icon {
+  background: #000000;
+  color: #ffffff;
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      padding: 15px 20px;
+  }
+
+  .balance-section {
+      width: 95%;
+      margin: 0 auto 30px auto;
+      padding: 25px;
+  }
+
+  .balance {
+      font-size: 2.5rem;
+  }
+
+  .quick-action {
+      margin: 30px 20px;
+  }
+
+  .action-buttons {
+      gap: 15px;
+  }
+
+  .action-btn {
+      width: 60px;
+      height: 60px;
+  }
+
+  .recent-transactions {
+      margin: 30px 20px;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #cccccc;
+  border-radius: 50%;
+  border-top-color: #000000;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hover states for better interaction */
+.balance-section:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.transactions-container:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
