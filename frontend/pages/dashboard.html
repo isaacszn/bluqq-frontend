@@ -3,71 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/assets/css/dashboard.css">
-    <link rel="shortcut icon" href="/frontend/assets/images/bluqq-logo.jpg" type="image/x-icon">
     <title>Bluqq - Wallet Dashboard</title>
+    <link rel="stylesheet" href="/dashboard.css">
 </head>
 <body>
-    <!-- Nav-top section: Where you get your user profile/account — that links to other section, and also notifications -->
+    <!-- Navigation -->
     <nav>
-        <button class="profile-btn"><img src="/frontend/assets/icons/user-icon-circled.svg" alt="user-icon" width="45" height="45"><br><span class="user-name">Isaac Szn</span></button>
-        <button class="notifications-btn"><img src="/frontend/assets/icons/notifications-icon.svg" alt="notifications-button" width="45" height="45"></button>
+        <button class="profile-btn" onclick="toggleProfile()">
+            <div class="user-avatar">IS</div>
+            <span class="user-name">Isaac Szn</span>
+        </button>
+        <button class="notifications-btn" onclick="toggleNotifications()">
+            <div class="nav-icon">🔔</div>
+            <div class="notification-badge"></div>
+        </button>
     </nav>
-    <!-- Wallet* -->
+
+    <!-- Main Content -->
     <main class="wallet">
-      <!-- Balance section: Comprises of account balance and a hide or show account button -->
-      <section class="balance-section">
-          <div>
-            <span>Active Balance:</span> <button class="eye-btn"><img src="/frontend/assets/icons/eye-icon.svg" alt="eye-button" width="20" height="20"></button>
-          </div>
-          <div>
-            <span class="balance">
-              <span>$</span><span>10,000</span><span>.00</span>
-            </span>
-          </div>
-      </section>
-      <!-- Quick action section: Section filled with quick actions like — withdraw, top up account, create contract-->
-      <section class="quick-action">
-        <p>Quick Action:</p>
-        <div>
-          <button><img src="/frontend/assets/icons/top-up-icon.svg" alt="top-up-icon" width="35" height="35"></button>
-          <button><img src="/frontend/assets/icons/withdraw-icon.svg" alt="withdraw-icon" width="35" height="35"></button>
-          <button><img src="/frontend/assets/icons/create-contracts-icon.svg" alt="create-contract-icon" width="35" height="35"></button>
-        </div>
-      </section>
-      <!-- Recent transactions section-->
-      <section class="recent-transactions">
-        <p>Recent Transactions:</p>
-        <div class="recent-transactions-section">
-          <p>No recent transaction...</p>
-        </div>
-      </section>
-      <br><br><br><br>
-      <!-- Activities section: A section that records recent activities like — active contracts, disputed contracts and so on-->
-      <!--<section class="activities">
-        <p>Activities</p>
-        <article>
-          <div>
-            <span>Active Contact(s)</span><span>0</span>
-          </div>
-          <div>
-            <span>Completed Contact(s)</span><span>0</span>
-          </div>
-          <div>
-            <span>Disputed</span><span>0</span>
-          </div>
-          <div>
-            <span>Total Action(s)</span><span>0</span>
-          </div>
-        </article>
-      </section>-->
+        <!-- Balance Section -->
+        <section class="balance-section">
+            <div class="balance-header">
+                <span>Active Balance:</span>
+                <button class="eye-btn" onclick="toggleBalance()">
+                    <div class="nav-icon" id="eyeIcon">👁️</div>
+                </button>
+            </div>
+            <div class="balance" id="balanceDisplay">
+                <span class="currency">$</span><span id="balanceAmount">10,000</span><span>.00</span>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-action">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+              <a href="/topup.html">
+                <button class="action-btn"  onclick="">
+                    <div class="action-icon">💰</div>
+                    <span class="action-label">Top Up</span>
+                </button>
+              </a>
+              <a href="/pullout.html">
+                <button class="action-btn" onclick="withdraw()">
+                    <div class="action-icon">📤</div>
+                    <span class="action-label">pull out</span>
+                </button>
+                </a>
+                <button class="action-btn" onclick="createContract()">
+                    <div class="action-icon">📋</div>
+                    <span class="action-label">Contract</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="recent-transactions">
+            <h3>Recent Transactions</h3>
+            <div class="transactions-container">
+                <div class="no-transactions">
+                    <div class="no-transactions-icon">📊</div>
+                    <span>No recent transactions...</span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer Navigation -->
     <footer>
-      <a href="#"><img src="/frontend/assets/icons/home-icon.svg" alt="home-icon" width="40" height="40"></a>
-      <a href="#"><img src="/frontend/assets/icons/contracts-icon.svg" alt="contracts-icon" width="40" height="40"></a>
-      <a href="#"><img src="/frontend/assets/icons/crypto-icon.svg" alt="crypto-icon" width="40" height="40"></a>
-      <a href="#"><img src="/frontend/assets/icons/settings-icon.svg" alt="settings-icon" width="40" height="40"></a>
-      <a href="#"><img src="/frontend/assets/icons/user-icon.svg" alt="user-icon" width="40" height="40"></a>
+        <a href="#" class="active">
+            <div class="nav-icon">🏠</div>
+        </a>
+        <a href="#">
+            <div class="nav-icon">📋</div>
+        </a>
+        <a href="#">
+            <div class="nav-icon">₿</div>
+        </a>
+        <a href="#">
+            <div class="nav-icon">⚙️</div>
+        </a>
+        <a href="#">
+            <div class="nav-icon">👤</div>
+        </a>
     </footer>
+
+    <script src="/dashboard.js"></script>
 </body>
 </html>
