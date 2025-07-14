@@ -1,2 +1,0 @@
-# Block
-Block frontend.
