@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluqq - Verify email</title>
+  <link rel="stylesheet" href="../../assets/css/verify-email.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/bluqq-logo.jpg">
+</head>
+
+<body>
+  <section class="first-view">
+    <figure>
+      <img src="../../assets/images/bluqq-logo.jpg" alt="block-logo" width="720" height="717">
+    </figure>
+  </section>
+
+  <form>
+    <div class="message-box d-n"></div>
+    <figure>
+      <img src="../../assets/images/bluqq-logo.jpg" alt="bluqq-logo" width="720" height="717">
+    </figure>
+    <h1>Email Verification</h1>
+    <p>Enter the OTP code sent to your email address.</p>
+    <div class="pin-boxes">
+      <input type="password" name="pin-1" id="pin-1" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-2" id="pin-2" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-3" id="pin-3" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+      <input type="password" name="pin-4" id="pin-4" inputmode="numeric" maxlength="1" pattern="[0-9]*" required>
+    </div>
+    <button type="submit">Verify</button>
+    <p>Didn't receive code? <a href="verify-email.html">Resend code</a></p>
+  </form>
+  <!-- Script -->
+  <script src="../../assets/scripts/auth-scripts/verify-email.js"></script>
+</body>
+
+</html>
