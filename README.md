@@ -32,10 +32,6 @@ graph TD
 
 ## Getting Started  
 
-### Prerequisites  
-- Docker 20.10+  
-- Docker Compose 2.0+  
-
 ### Installation  
 1. Clone repository:  
 ```bash
