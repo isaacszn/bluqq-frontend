@@ -1,4 +1,4 @@
-# Bluqq - Unified Financial Platform  
+# Bluqq - Unified Financial Platform 
 
 **Bluqq** is a comprehensive financial technology platform designed to empower users with secure, efficient, and integrated monetary solutions. Combining traditional financial services with modern digital asset capabilities, Bluqq provides a seamless experience for personal and commercial transactions.
 
